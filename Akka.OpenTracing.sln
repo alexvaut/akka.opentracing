@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.OpenTracing", "src\Akka\OpenTracing\Lib\Akka.OpenTracing.csproj", "{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.OpenTracing.Sample.Local", "src\Akka\OpenTracing\Samples\Local\Akka.OpenTracing.Sample.Local.csproj", "{32910439-599B-41EB-A1FA-74E6B1063BCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{42051BCD-B2E8-40F5-8832-C7A0908751D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.OpenTracing.Tests", "src\Akka\OpenTracing\Tests\Akka.OpenTracing.Tests\Akka.OpenTracing.Tests.csproj", "{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EE9CD6DA-D7FF-4AAC-B237-052EE59D195B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{42912EB7-0C1D-411A-801B-466C2738C279}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32910439-599B-41EB-A1FA-74E6B1063BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32910439-599B-41EB-A1FA-74E6B1063BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32910439-599B-41EB-A1FA-74E6B1063BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32910439-599B-41EB-A1FA-74E6B1063BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1} = {42912EB7-0C1D-411A-801B-466C2738C279}
+		{32910439-599B-41EB-A1FA-74E6B1063BCF} = {42051BCD-B2E8-40F5-8832-C7A0908751D5}
+		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936} = {EE9CD6DA-D7FF-4AAC-B237-052EE59D195B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A8F41FA-0826-4C19-8139-9E8F5BAF4E18}
+	EndGlobalSection
+EndGlobal
