@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "Akka.OpenTracing.Sample.Cluster": {
+      "commandName": "Executable",
+      "environmentVariables": {
+        "JAEGER_SERVICE_NAME": "akka_local"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "environmentVariables": {
+        "JAEGER_SAMPLER_PARAM": "1",
+        "JAEGER_AGENT_PORT": "6831 ",
+        "JAEGER_SAMPLER_TYPE": "const",
+        "JAEGER_REPORTER_LOG_SPANS": "true",
+        "JAEGER_SERVICE_NAME": "akka_cluster",
+        "JAEGER_AGENT_HOST": "192.168.1.140"
+      }
+    }
+  }
+}

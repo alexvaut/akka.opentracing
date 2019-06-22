@@ -5,6 +5,9 @@ using OpenTracing;
 
 namespace Akka.OpenTracing
 {
+    /// <summary>
+    /// Any actor in the user space must implement it.
+    /// </summary>
     public abstract class TracedActor : UntypedActor
     {
         private IAkkaTracer _tracer;

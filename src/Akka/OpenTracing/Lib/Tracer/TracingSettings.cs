@@ -26,12 +26,15 @@ namespace Akka.OpenTracing.Tracer
             //NOTE: not reporter for now
             var reporterConfiguration = new Jaeger.Configuration.ReporterConfiguration(loggerFactory)
                 .WithLogSpans(true);
-            
+
             //NOTE: only support jaeger for now
-            return new Jaeger.Configuration(serviceName, loggerFactory)
-                             .WithSampler(samplerConfiguration)        
-                             .WithReporter(reporterConfiguration)
-                             .GetTracer();
+            var config = Jaeger.Configuration.FromEnv(loggerFactory);
+            return config.GetTracer();
+
+            //return new Jaeger.Configuration(serviceName, loggerFactory)
+            //                 .WithSampler(samplerConfiguration)        
+            //                 .WithReporter(reporterConfiguration)                             
+            //                 .GetTracer();
         }
     }
 }

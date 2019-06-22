@@ -6,6 +6,7 @@
 //-----------------------------------------------------------------------
 
 using System;
+using System.Threading;
 using Akka.Actor;
 using Akka.Configuration;
 
@@ -45,7 +46,10 @@ traced-mailbox {
             greeter.Tell(new Greet("World"));
 
             // prevent the application from exiting before message is handled
-            Console.ReadLine();
+            Console.WriteLine("Wait for Ctrl+C.");
+            ManualResetEvent e = new ManualResetEvent(false);
+            Console.CancelKeyPress += delegate { e.Set(); };
+            e.WaitOne();
         }
     }
 }
