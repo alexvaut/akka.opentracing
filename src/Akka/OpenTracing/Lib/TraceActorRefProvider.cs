@@ -7,6 +7,9 @@ using Akka.OpenTracing.Tracer;
 
 namespace Akka.OpenTracing
 {
+    /// <summary>
+    /// Actor Ref provider to be used for local usage of akka only (no cluster or remote actors).
+    /// </summary>
     public class TraceActorRefProvider : ITraceActorRefProvider
     {
         protected readonly IActorRefProvider _delegate;

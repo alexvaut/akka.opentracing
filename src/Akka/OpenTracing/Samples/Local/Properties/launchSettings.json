@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Akka.OpenTracing.Sample.Local": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -6,6 +6,10 @@ using Akka.OpenTracing.Impl;
 
 namespace Akka.OpenTracing
 {
+    /// <summary>
+    /// Default mailbox for traced actor.
+    /// Right now it's limited to the unbounded mail box.
+    /// </summary>
     public class TracedMailbox : MailboxType, IProducesMessageQueue<IMessageQueue>
     {
         public TracedMailbox(Settings settings, Config config) : base(settings, config)

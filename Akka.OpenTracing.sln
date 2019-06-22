@@ -9,11 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.OpenTracing.Sample.Loc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{42051BCD-B2E8-40F5-8832-C7A0908751D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.OpenTracing.Tests", "src\Akka\OpenTracing\Tests\Akka.OpenTracing.Tests\Akka.OpenTracing.Tests.csproj", "{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.OpenTracing.Tests", "src\Akka\OpenTracing\Tests\Akka.OpenTracing.Tests\Akka.OpenTracing.Tests.csproj", "{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EE9CD6DA-D7FF-4AAC-B237-052EE59D195B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{42912EB7-0C1D-411A-801B-466C2738C279}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{066A59A3-1D05-4625-9B75-F820615EF944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.OpenTracing.Sample.Cluster", "src\Akka\OpenTracing\Samples\Cluster\Akka.OpenTracing.Sample.Cluster.csproj", "{8FBC2403-58C0-4469-8938-48F9C6D17B9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066A59A3-1D05-4625-9B75-F820615EF944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066A59A3-1D05-4625-9B75-F820615EF944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066A59A3-1D05-4625-9B75-F820615EF944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066A59A3-1D05-4625-9B75-F820615EF944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBC2403-58C0-4469-8938-48F9C6D17B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBC2403-58C0-4469-8938-48F9C6D17B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBC2403-58C0-4469-8938-48F9C6D17B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBC2403-58C0-4469-8938-48F9C6D17B9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +53,7 @@ Global
 		{27F3CEB6-9960-47A4-8B4A-E0DC2DA004D1} = {42912EB7-0C1D-411A-801B-466C2738C279}
 		{32910439-599B-41EB-A1FA-74E6B1063BCF} = {42051BCD-B2E8-40F5-8832-C7A0908751D5}
 		{6FE0E9F9-E8CE-4D6D-8CFE-54F1C67DA936} = {EE9CD6DA-D7FF-4AAC-B237-052EE59D195B}
+		{8FBC2403-58C0-4469-8938-48F9C6D17B9F} = {42051BCD-B2E8-40F5-8832-C7A0908751D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A8F41FA-0826-4C19-8139-9E8F5BAF4E18}
