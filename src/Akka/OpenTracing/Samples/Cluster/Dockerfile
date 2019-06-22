@@ -3,11 +3,11 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
-COPY ["src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster/Akka.OpenTracing.Sample.Cluster.csproj", "src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster/"]
+COPY ["src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster.csproj", "src/Akka/OpenTracing/Samples/Cluster/"]
 COPY ["src/Akka/OpenTracing/Lib/Akka.OpenTracing.csproj", "src/Akka/OpenTracing/Lib/"]
-RUN dotnet restore "src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster/Akka.OpenTracing.Sample.Cluster.csproj"
+RUN dotnet restore "src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster.csproj"
 COPY . .
-WORKDIR "/src/src/Akka/OpenTracing/Samples/Cluster/Akka.OpenTracing.Sample.Cluster"
+WORKDIR "/src/src/Akka/OpenTracing/Samples/Cluster"
 RUN dotnet build "Akka.OpenTracing.Sample.Cluster.csproj" -c Release -o /app
 
 FROM build AS publish
