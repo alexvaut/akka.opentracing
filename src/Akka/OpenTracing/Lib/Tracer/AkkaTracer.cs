@@ -54,8 +54,8 @@ namespace Akka.OpenTracing.Tracer
 
             IScope ret = builder.StartActive(true);
 
-            ret.Span.SetTag("sender.path", context.Sender.Path.ToString());
-            ret.Span.SetTag("receiver.path", GetReceiverPath(context.Self));
+            ret.Span.SetTag("sender.path", GetSenderPath(context.Sender));
+            ret.Span.SetTag("receiver.path", GetLocalActorPath(context.Self));
             ret.Span.SetTag("receiver.type", actorType.ToString());
             ret.Span.SetTag("message.type", tracedMessage.Message.GetType().ToString());
 
@@ -77,7 +77,17 @@ namespace Akka.OpenTracing.Tracer
             return envelope;
         }
 
-        private string GetReceiverPath(IActorRef actor)
+        private string GetSenderPath(IActorRef sender)
+        {
+            string ret = sender.Path.ToString();
+            if (!ret.Contains("@"))
+            {
+                ret = GetLocalActorPath(sender);
+            }            
+            return ret;
+        }
+
+        private string GetLocalActorPath(IActorRef actor)
         {
             string ret = _serviceName + "/" + string.Join("/", actor.Path.Elements);
             return ret;

@@ -30,7 +30,7 @@ namespace Akka.OpenTracing.Tests.Tracer
             at.AroundReceive(context, new TracedMessage("m", null),typeof(SampleActor));
 
             //assert
-            scope.Span.Received(1).SetTag("sender.path", "akka://system/sa");
+            scope.Span.Received(1).SetTag("sender.path", "akka://service/sa");
             scope.Span.Received(1).SetTag("receiver.path", "akka://service/ra");
             scope.Span.Received(1).SetTag("receiver.type", "Akka.OpenTracing.Tests.SampleActor");
             scope.Span.Received(1).SetTag("message.type", "System.String");

@@ -51,6 +51,9 @@ namespace Akka.OpenTracing.Sample.Cluster
                 var timeout = TimeSpan.FromSeconds(5);
                 var counter = new AtomicCounter();
 
+                //to debug a single message
+                //frontend.Ask(new JobRequest("job-" + counter.GetAndIncrement()));
+
                 //simulate users
                 system.Scheduler.Advanced.ScheduleRepeatedly(interval, interval,
                     () => frontend.Ask(new JobRequest("job-" + counter.GetAndIncrement()), timeout)
